@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home page</title>
+	
+		<style>
+			body{
+				background-color: black;
+			}
+			.hello{
+				position:initial;
+				text-align: center;
+				color: white;
+			}
+.page th {
+	
+    background-color: #add8e6;
+    color: white;
+	
+}
+.page{
+	text-align: center;
+	color: white;
+	align-content: center;
+	
+}
+
+
+</style>
+</head>
+<body>
+	<div class="hello">
+	<h1>KINDLY UPLOAD YOUR RESUME</h1>
+
+	<form method="POST" action="/submit" enctype="multipart/form-data">
+	
+	<input type="file" name="userfile">
+	<input type="submit">
+	</form>
+	</div>
+
+
+	<div class=page>
+ 		<h1>SUGGESTED JOBS</h1>
+		 {% for table in tables %}
+    	
+    	{{ table|safe }}
+  		{% endfor %}
+		 
+	</div>
+</body>
+
+</html>
